@@ -54,15 +54,16 @@ exports.config = {
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
-        platformVersion: '13.0',
-        deviceName: 'Pixel_3a',
-        udid: 'emulator-5554',
-        autoGrantPermissions: true,
-        app: 'apk/Android-NativeDemoApp-0.4.0.apk',
-        automationName: 'UiAutomator2',
-        appPackage: 'com.wdiodemoapp',
-        appActivity: 'com.wdiodemoapp.MainActivity',
+        'appium:platformVersion': '13.0',
+        'appium:deviceName': 'Pixel_3a',
+        'appium:udid': 'emulator-5554',
+        'appium:autoGrantPermissions': true,
+        'appium:app': 'apk/Android-NativeDemoApp-0.4.0.apk',
+        'appium:automationName': 'UiAutomator2',
+        'appium:appPackage': 'com.wdiodemoapp',
+        'appium:appActivity': 'com.wdiodemoapp.MainActivity',
     }],
+    
 
     //
     // ===================
