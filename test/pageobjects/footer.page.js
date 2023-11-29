@@ -1,15 +1,15 @@
-const { $ } = require('@wdio/globals')
+const { $ } = require("@wdio/globals");
 
 module.exports = class Footer {
-    get loginWidget() {
-        return $('//*[@content-desc="Login"]');
-    }
+  get loginWidget() {
+    return $('//*[@content-desc="Login"]');
+  }
 
-    get webviewWidget() {
-        return $('//android.widget.TextView[@text="Webview"]');
-    }
+  get webviewWidget() {
+    return $('//*[@text="Webview"]');
+  }
 
-    get swipeWidget() {
-        return $('//android.widget.TextView[@text="Swipe"]');
-    }
-}
+  get swipeWidget() {
+    return $('//*[@text="Swipe"]');
+  }
+};
