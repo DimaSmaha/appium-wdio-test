@@ -54,7 +54,14 @@ exports.config = {
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
-        browserName: 'Chrome',
+        platformVersion: '13.0',
+        deviceName: 'Pixel_3a',
+        udid: 'emulator-5554',
+        autoGrantPermissions: true,
+        app: 'apk/Android-NativeDemoApp-0.4.0.apk',
+        automationName: 'UiAutomator2',
+        appPackage: 'com.wdiodemoapp',
+        appActivity: 'com.wdiodemoapp.MainActivity',
         'appium:deviceName': 'Android GoogleAPI Emulator',
         'appium:platformVersion': '12.0',
         'appium:automationName': 'UiAutomator2'
@@ -107,7 +114,13 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['appium'],
+    services: [
+        ['appium', {
+            command: 'appium',
+            logPath: './logs/'
+        }]
+    ],
+    
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
