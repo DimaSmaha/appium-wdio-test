@@ -62,9 +62,6 @@ exports.config = {
         automationName: 'UiAutomator2',
         appPackage: 'com.wdiodemoapp',
         appActivity: 'com.wdiodemoapp.MainActivity',
-        'appium:deviceName': 'Android GoogleAPI Emulator',
-        'appium:platformVersion': '12.0',
-        'appium:automationName': 'UiAutomator2'
     }],
 
     //
