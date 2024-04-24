@@ -1,12 +1,13 @@
 {
   "name": "appium-wdio-test",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test-android": "wdio run ./wdio.android.conf.js",
     "test-android-bs": "wdio run ./wdio.android.bs.conf.js",
-    "report": "npx allure generate allure-results --clean && npx allure open"
+    "report": "npx allure generate allure-results --clean && npx allure open",
+    "bundle": "npm-bundle",
+    "create-zip": "zip -r MyTests.zip *.tgz"
   },
   "keywords": [],
   "author": "",
@@ -27,5 +28,17 @@
   },
   "dependencies": {
     "dotenv": "^16.3.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DimaSmaha/appium-wdio-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DimaSmaha/appium-wdio-test/issues"
+  },
+  "homepage": "https://github.com/DimaSmaha/appium-wdio-test#readme",
+  "description": ""
 }
